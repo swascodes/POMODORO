@@ -1,0 +1,132 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a1b9a 25%, #9c27b0 25%, #9c27b0 50%, #6a1b9a 50%, #6a1b9a 75%, #9c27b0 75%, #9c27b0 100%);
+    background-size: 200% 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(231, 199, 250, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    width: 320px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1100ff;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+select:hover {
+    background-color: #e0e0e0;
+}
+
+.timer {
+    font-size: 60px;
+    margin: 20px 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px;
+}
+
+button#startBtn {
+    background-color: #4caf50;
+}
+
+button#startBtn:hover {
+    background-color: #45a049;
+}
+
+button#pauseBtn,
+button#playBtn {
+    background-color: #2196F3; /* Blue color for pause and play buttons */
+}
+
+button#pauseBtn:hover,
+button#playBtn:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+button#resetBtn {
+    background-color: #ff6b6b;
+}
+
+button#resetBtn:hover {
+    background-color: #e55a5a;
+}
+
+.pointer {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(252, 254, 255, 0.0);
+    box-shadow: 0 0 25px rgba(204, 204, 204, 0.9);
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+.congrats-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 3;
+}
+
+.congrats-message.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.congrats-message h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff8800;
+    margin: 0;
+}
+
+.congrats-message p {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
